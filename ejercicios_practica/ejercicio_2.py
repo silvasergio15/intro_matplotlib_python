@@ -37,7 +37,19 @@ if __name__ == '__main__':
 
     # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
+    fig= plt.figure()
+    fig.suptitle("EJERCICIO 2")
+    ax= fig.add_subplot()
+    ax.plot(x, y1,color="r", label="datos en y1")
+    ax.plot(x, y2, color="g", label="datos en y2")
+    ax.set_xlabel("EJE X", colo= "r")
+    ax.set_ylabel("EJE Y", color= "g")
+    ax.legend()
+    
+    plt.show()
 
+
+    
     # Se debe colocar en la leyenda la función que representa
     # cada función
 

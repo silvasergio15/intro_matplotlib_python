@@ -8,6 +8,8 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from turtle import color
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -43,7 +45,46 @@ if __name__ == '__main__':
     #  graf3 | graf4
     # Utilizar add_subplot para lograr este efecto
     # de "2 filas" "2 columna" de gráficos
+    
+    # y1 = []
+    # for i in x:
+    #     y1.append(i**2)
+        
+    fig = plt.figure()
+    fig.suptitle('ejercicio 4', fontsize=22)
 
+    ax1 = fig.add_subplot(2,2,1)  # 2 fila, 2 columnas, axes nº1
+    ax1.set_xlabel("eje x")
+    ax1.set_ylabel("eje y")
+    ax1.set_title("y1")
+    
+    ax1.plot(x,y1, color="b")
+
+    ax2= fig.add_subplot(2, 2, 2)  # 2 fila, 2 columnas, axes nº2
+    ax2.plot(x,y2, color ="y") 
+    ax2.set_xlabel("eje x")
+    ax2.set_ylabel("eje y")
+    ax2.set_title("y2")
+
+
+
+
+    ax3= fig.add_subplot(2, 2, 3)  # 2 fila, 2 columnas, axes nº3
+    ax3.scatter(x,y3 , color="r")
+    ax3.set_xlabel("eje x")
+    ax3.set_ylabel("eje y")
+    ax3.set_title("y3")
+
+
+
+    ax4=fig.add_subplot(2,2,4)      # 2 fila, 2 columnas, axes nº3
+    ax4.plot(x,y4, color="k")
+    ax4.set_xlabel("eje x")
+    ax4.set_ylabel("eje y")
+    ax4.set_title("y4")
+        #ax3= fig.add_subplot(2, 2, 3)  # 2 fila, 2 columnas, axes nº1
+        #ax4= fig.add_subplot(2, 2, 4)  # 2 fila, 2 columnas, axes nº2
+    
     # Se debe colocar en la leyenda la función que representa
     # cada gráfico
 
@@ -51,7 +92,12 @@ if __name__ == '__main__':
     # a su elección
 
     # Colocar una grilla a elección
+    ax1.grid(color="y")
+    ax2.grid(color="r")
+    ax3.grid(color="b")
+    ax4.grid(color="c")
 
     # Crear acá su gráfico
-
+    plt.tight_layout()
+    plt.show()
     print("terminamos")

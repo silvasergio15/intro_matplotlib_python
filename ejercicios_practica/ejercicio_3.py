@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -27,11 +28,23 @@ if __name__ == '__main__':
 
     # Alumno: Graficar la función utilizando "scatter"
     # utilizando "x" e "y" ya disponible
+    fig= plt.figure()
+    ax= fig.add_subplot()
+   
+    ax.scatter(x, y, color="r", label="tangente", marker="<")
+    ax.set_xlabel("EJE X",color="r")
+    ax.set_ylabel("EJE Y", color="g")
+    plt.suptitle("ejercicio 3")
+
+    ax.legend()
+    
+    
 
     # Colocar la leyenda y el label con el nombre de la función
 
     # Elegir un marker a elección
 
     # Crear acá su gráfico
-
+    plt.show()
+    
     print("terminamos")
